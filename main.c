@@ -9,7 +9,7 @@ int main()
     int countx = 0, counto = 0;
     for(int i = 0; i < SIZE; i++){
         for(int j = 0; j < SIZE; j++){
-            scanf("%d", &startingNode->table[i][j]);
+            scanf("%hhd", &startingNode->table[i][j]);
             if(startingNode->table[i][j] == 1){
                 countx++;
             }else if(startingNode->table[i][j] == 2){
