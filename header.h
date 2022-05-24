@@ -4,7 +4,8 @@
 
 #define SIZE 3
 
-typedef struct node{
+typedef struct node
+{
     char table[SIZE][SIZE];
     struct node **children;
     int child_nr;
@@ -14,6 +15,6 @@ typedef struct node{
 
 void printGame(char game[SIZE][SIZE]);
 char findWinner(char game[SIZE][SIZE]);
-PNode *get_moves(Node *node, int *child_nr, char curr_player);
+Node *get_moves(Node *node, char curr_player);
 void copy_table(char old_table[SIZE][SIZE], char new_table[SIZE][SIZE]);
 Node *minimax(Node *node, char curr_player);
