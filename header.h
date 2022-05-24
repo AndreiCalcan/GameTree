@@ -2,9 +2,14 @@
 #include <stdlib.h>
 #include <limits.h>
 
+#define SIZE 3
+
 typedef struct node{
-    char table[3][3];
+    char table[SIZE][SIZE];
     struct node **children;
     int depth;
     char score;
-}Node, *PNode; 
+}Node, *PNode;
+
+void printGame(char game[SIZE][SIZE]);
+char findWinner(char game[SIZE][SIZE]);
