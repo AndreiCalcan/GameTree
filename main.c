@@ -27,9 +27,10 @@ int main()
     for(int i = 0; i < startingNode->child_nr; i++){
         if(startingNode->children[i]->score == startingNode->score){
             printGame(startingNode->children[i]->table);
-            break; 
+            //break; 
         }
     }
+    printf("\n");
 free:
     freeTree(startingNode);
     return 0;

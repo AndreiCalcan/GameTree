@@ -23,7 +23,7 @@ void printGame(char game[3][3])
         }
         printf("|\n");
     }
-    printf("- - - - -\n");
+    printf("- - - - -");
 }
 
 char findWinner(char game[SIZE][SIZE])
