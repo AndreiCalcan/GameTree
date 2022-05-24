@@ -11,3 +11,9 @@ typedef struct node
     int depth;
     char score;
 } Node, *PNode;
+
+void printGame(char game[SIZE][SIZE]);
+char findWinner(char game[SIZE][SIZE]);
+PNode *get_moves(Node *node, int *child_nr, char curr_player);
+void copy_table(char old_table[SIZE][SIZE], char new_table[SIZE][SIZE]);
+Node *minimax(Node *node, char curr_player);

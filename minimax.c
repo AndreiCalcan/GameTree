@@ -30,4 +30,20 @@ PNode *get_moves(Node *node, int *child_nr, char curr_player)
             }
         }
     }
+
+    return node->children;
+}
+
+Node *minimax(Node *node, char main_player)
+{
+    char winner = findWinner(node->table);
+    if (winner == main_player)
+        node->score = 1;
+    else if (winner > 0)
+        node->score = -1;
+    else if (winner == 0)
+        node->score = 0;
+
+    if (winner != -1)
+        return node;
 }
