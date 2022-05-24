@@ -7,4 +7,5 @@ typedef struct node{
     struct node **children;
     int depth;
     char score;
-}Node, *PNode; 
+}Node, *PNode;
+
