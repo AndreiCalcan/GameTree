@@ -19,3 +19,4 @@ Node *get_moves(Node *node, char curr_player);
 void copy_table(char old_table[SIZE][SIZE], char new_table[SIZE][SIZE]);
 Node *minimax(Node *node, char main_player);
 void freeTree(PNode curr);
+Node *alfa_beta(Node *node, char main_player, char alfa, char beta);

@@ -28,7 +28,8 @@ int main()
         goto free;
     }
     printGame(startingNode->table);
-    startingNode = minimax(startingNode, countx - counto + 1);
+    startingNode = alfa_beta(startingNode, countx - counto + 1, CHAR_MIN, CHAR_MAX);
+    // startingNode = minimax(startingNode, countx - counto + 1);
     printf("%d\n", startingNode->score);
     for (int i = 0; i < startingNode->child_nr; i++)
     {
