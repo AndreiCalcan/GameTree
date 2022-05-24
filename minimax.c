@@ -13,7 +13,7 @@ void copy_table(char old_table[SIZE][SIZE], char new_table[SIZE][SIZE])
 
 Node *get_moves(Node *node, char curr_player)
 {
-    node->children = (Node *)malloc(sizeof(Node) * 9);
+    node->children = (Node **)malloc(sizeof(Node *) * 9);
     for (int i = 0; i < SIZE; i++)
     {
         for (int j = 0; j < SIZE; j++)
