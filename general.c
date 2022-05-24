@@ -1,14 +1,16 @@
 #include "header.h"
 
-void printGame(char game[SIZE][SIZE]){
+void printGame(char game[3][3]){
     printf("- - - - -\n");
-    for(int i = 0; i < SIZE; i++){
+    for(int i = 0; i < 3; i++){
         printf("| ");
-        for(int j = 0; j < SIZE; j++){
+        for(int j = 0; j < 3; j++){
            if(game[i][j] == 1){
                printf("X ");
-           }else{
+           }else if(game[i][j] == 2){
                printf("O ");
+           }else{
+               printf("  ");
            }
         }
         printf("|\n");
