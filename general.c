@@ -132,3 +132,17 @@ char findWinner(char game[SIZE][SIZE])
         return -1;
     }
 }
+
+void freeTree(PNode curr){
+    if(!curr){
+        return;
+    }else{
+        for(int i = 0; i < curr->child_nr; i++){
+            freeTree(curr->children[i]);
+        }
+        if(curr->child_nr){
+            free(curr->children);
+        }
+        free(curr);
+    }
+}
