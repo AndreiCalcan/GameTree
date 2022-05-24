@@ -31,5 +31,6 @@ int main()
         }
     }
 free:
+    freeTree(startingNode);
     return 0;
 }
