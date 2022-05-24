@@ -12,3 +12,4 @@ typedef struct node{
 }Node, *PNode;
 
 void printGame(char game[SIZE][SIZE]);
+char findWinner(char game[SIZE][SIZE]);
