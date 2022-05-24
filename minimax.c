@@ -30,7 +30,12 @@ Node *get_moves(Node *node, char curr_player)
             }
         }
     }
-
+    node->children = (Node **)realloc(node->children, sizeof(Node *) * node->child_nr);
+    if (node->children == NULL)
+    {
+        printf("Not enough memory\n");
+        exit(1);
+    }
     return node;
 }
 
